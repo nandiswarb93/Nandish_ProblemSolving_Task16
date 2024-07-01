@@ -1,0 +1,116 @@
+//1st
+
+row = +prompt("enter rows : ")
+
+for(i=1;i<=row-1;i++)
+{
+    a = ""
+    for(j=1;j<=row-i;j++)
+    {
+        a += " "
+    }
+    for(k=1;k<=i;k++)
+    {
+        a += "* "
+    }
+    console.log(a)
+}
+
+
+for(i=1;i<=row;i++)
+{
+s = ""
+for(k=1;k<=i-1;k++)
+{
+s = s + " ";
+}
+for(j=1;j<=row-i+1;j++)
+{
+s = s + "* ";
+}
+console.log(s)
+}
+
+
+
+
+
+//2nd
+
+
+row = 10
+for( i = 1 ;i <= row/2 ;i++)
+{
+    s = ""
+    for( j = 1 ;j<=row-1;j++)
+    {
+        if( i == 1 ||i == j||j == row-i)
+        {
+            s = s + "* "
+        }
+        else{
+            s = s + "  "
+        }
+        
+    }
+    console.log(s)
+}
+
+
+//3rd
+rows = +prompt("enter a no of rows : ")
+prime = 2
+for(i = 1;i<=rows;i++)
+{
+    primecount=0,s=""
+    while(true)
+    {
+        c = 0
+        for(j = 2;j<prime;j++)
+        {
+            if(prime%j == 0)
+            {
+                c++
+                break
+            }
+        }
+        if(c==0)
+        {
+            primecount++
+            s = s+prime+" "
+            if(primecount == i)
+            {
+                console.log(s)
+                prime++
+                break
+            }
+        }
+        prime++
+    }
+}
+
+
+o/p:
+
+
+enter rows : 5
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+* * * * * * * * * 
+  *           *   
+    *       *     
+      *   *       
+        *         
+enter a no of rows : 5
+2 
+3 5 
+7 11 13 
+17 19 23 29 
+31 37 41 43 47 
